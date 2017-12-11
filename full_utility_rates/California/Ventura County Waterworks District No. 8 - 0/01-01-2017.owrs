@@ -1,0 +1,42 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Ventura County Waterworks District No. 8
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 47.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 30.85
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 67.6
+        1": 108.4
+        1|1/2": 210.4
+        2": 332.75
+        3": 720.35
+        4": 1291.55
+        6": 2862.3
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge

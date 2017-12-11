@@ -1,0 +1,61 @@
+metadata:
+  effective_date: 11/01/2012
+  utility_name: City of Santa Paula
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.57
+        3/4": 36.89
+        1": 62.07
+        1|1/2": 124.12
+        2": 196.23
+        3": 426.81
+        4": 615.54
+        6": 1229.38
+        8": 1965.66
+        10": 2826.06
+        12": 4053.76
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.57
+        3/4": 36.89
+        1": 62.07
+        1|1/2": 106.58
+        2": 106.58
+        3": 253.93
+        4": 854.27
+        6": 1348.02
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 35.23
+        6": 71.53
+        8": 114.04
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
